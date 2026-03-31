@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="magic.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
@@ -40,7 +42,7 @@
         <div class="nav-left">
             <div class="nav-left-container">
                 <div class="logo-container">
-                    <img src="img/logo.png" alt="">
+
                 </div>
                 <div class="btn-container">
                     <button class="icon-btn" data-tooltip="HOME" style="--data-color: #A59583">
@@ -120,13 +122,7 @@
                     </div>
 
                     <div class="language-dropdown">
-                        <img src="img/english_icon.png" alt="">
-                        <div id="language-select">
-                            <div class="language-option" data-value="fr">
-                                <img src="img/french-icon.png" alt="Français">
-                            </div>
-                            <!-- Ajoutez d'autres options de langue ici si nécessaire -->
-                        </div>
+                        <img src="img/AP-Logo.svg" alt="">
                     </div>
 
                     <div class="time-container">
@@ -157,7 +153,7 @@
                                 </div>
                                 <input type="email" name="" id="" placeholder="Email">
                                 <textarea name="" id="" cols="10" rows="1" placeholder="Message"></textarea>
-                                <input class="submit-btn" type="submit" value="Send Message">
+                                <button class="btn submit-btn" type="submit" value="Send Message">Send Message</button>
                             </form>
                         </div>
 
@@ -202,9 +198,8 @@
                                     </div>
                                     <div class="contact_divider"></div>
                                     <div class="info">
-                                        <p>contact@alexypiche.com</p>
                                         <p>alexyautumn@gmail.com</p>
-                                        <p>+1 (819) 680-3069</p>
+                                        <p>+1 (581) 979-1604</p>
                                     </div>
                                 </div>
                             </div>
@@ -266,6 +261,7 @@
 
 
     <script type="module" src="main.js"></script>
+    <script src="transitions.js"></script>
 </body>
 
 </html>
