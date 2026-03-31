@@ -46,6 +46,7 @@ function updateTime() {
 }
 
 // Call updateTime function every second to update the time
+updateTime();
 setInterval(updateTime, 1000);
 
 
