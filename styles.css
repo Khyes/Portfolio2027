@@ -7,7 +7,7 @@ body {
 	font-family: "Outfit", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 16px;
+	font-size: clamp(16px, 1vw, 18px);
 	background-color: #000
 }
 
@@ -253,7 +253,7 @@ img {
 	width: 100%;
 	padding: 1.5rem;
 	border-bottom: 1px solid #ebe5dd;
-	font-size: 12px;
+	font-size: clamp(12px, 0.8vw, 14px);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	/* Safari */
@@ -558,7 +558,7 @@ img {
 .hero-bg {
 	position: fixed;
 	z-index: 1;
-	/* bottom: -15px; */
+	bottom: 0px;
 	left: 8rem;
 	width: 140%;
 	z-index: 2;
@@ -607,7 +607,7 @@ canvas {
 	border-radius: 3rem;
 	opacity: 1;
 	left: 150px;
-	font-size: 12px;
+	font-size: clamp(12px, 0.8vw, 14px);
 	font-weight: 700;
 	opacity: 0;
 	background-color: #fff;
@@ -643,7 +643,7 @@ canvas {
 }
 
 .small-text {
-	font-size: 12px
+	font-size: clamp(12px, 0.8vw, 14px);
 }
 
 #hero-up[data-tooltip]:hover:before {
@@ -653,7 +653,7 @@ canvas {
 .hero-info-container h1 {
 	font-family: 'DM Serif Display';
 	font-weight: 400;
-	font-size: 72px;
+	font-size: clamp(72px, 5vw, 74px);
 	margin: 1rem 0;
 	margin-left: -10px;
 	text-align: left;
@@ -670,7 +670,7 @@ canvas {
 .hero-info-container .info {
 	margin: 1rem 0;
 	max-width: 600px;
-	font-size: 16px;
+	/* font-size: 16px; */
 	line-height: 1.5
 }
 
@@ -794,7 +794,7 @@ canvas {
 	gap: 10px;
 	align-items: center;
 	/* font-family: 'DM Serif Display'; */
-	font-size: 14px;
+	font-size: clamp(14px, 1vw, 15px);
 	text-transform: uppercase
 }
 
@@ -807,7 +807,7 @@ canvas {
 
 .info p {
 	line-height: 1.5;
-	font-size: 12px
+	font-size: clamp(12px, 0.8vw, 14px);
 }
 
 .form-container {
@@ -832,7 +832,7 @@ canvas {
 
 .text h1 {
 	font-family: 'DM Serif Display';
-	font-size: 90px;
+	font-size: clamp(90px, 6vw, 95px);
 	text-align: center;
 	text-transform: uppercase;
 	margin-left: -5px;
@@ -844,7 +844,7 @@ canvas {
 	color: #2e271f;
 	font-weight: 200;
 	text-align: center;
-	font-size: 16px;
+	/* font-size: 16px; */
 }
 
 form {
@@ -861,7 +861,7 @@ form input {
 	background-color: transparent;
 	color: #000;
 	font-family: "Outfit", sans-serif;
-	font-size: 16px
+	font-size: 16px;
 }
 
 form textarea {
@@ -873,7 +873,7 @@ form textarea {
 	background-color: transparent;
 	color: #000;
 	font-family: "Outfit", sans-serif;
-	font-size: 16px
+	/* font-size: 16px */
 }
 
 /*  */
@@ -1053,12 +1053,12 @@ footer p {
 }
 
 footer span {
-	font-size: 10px;
+	font-size: clamp(10px, 0.7vw, 11px);
 	color: #2c2c2c80
 }
 
 span.icon {
-	font-size: 14px;
+	font-size: clamp(14px, 1vw, 15px);
 	position: relative;
 	top: 0;
 	padding: 0 .5rem
