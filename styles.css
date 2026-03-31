@@ -533,6 +533,12 @@ img {
 	opacity: 0;
 }
 
+#hero-content {
+	justify-content: flex-end;
+	padding: 0 3rem;
+
+}
+
 @keyframes myAnim {
 	0% {
 		opacity: 0;
@@ -548,7 +554,7 @@ img {
 .hero-section {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 	color: #000000;
 	padding: 0rem;
 	gap: 5rem;
@@ -571,7 +577,9 @@ canvas {
 
 
 .hero-info-container {
-	margin-left: 30rem;
+	/* margin-left: 30rem; */
+	position: relative;
+	width: 90%;
 }
 
 #hero-logo-container {
@@ -1074,10 +1082,6 @@ span.icon {
 		width: clamp(90%, calc(75vw - 5vh), 220%);
 	}
 
-	.hero-info-container {
-		margin-left: 20rem;
-	}
-
 	.hero-info-container h1 {
 		font-size: clamp(60px, 4.5vw, 72px);
 	}
@@ -1091,10 +1095,6 @@ span.icon {
 
 	canvas {
 		width: clamp(95%, calc(80vw), 250%);
-	}
-
-	.hero-info-container {
-		margin-left: 14rem;
 	}
 
 	.hero-info-container h1 {
