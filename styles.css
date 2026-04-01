@@ -1059,7 +1059,9 @@ h4 {
 	font-family: 'DM Serif Display';
 	text-transform: uppercase;
 	margin-bottom: 0.5rem;
-	font-size: 25px;
+	/* font-size: 25px; */
+	/* font-size: 2vw; */
+	font-size: clamp(25px, 1.5vw, 60px)
 }
 
 .tools h3 {
@@ -1495,6 +1497,10 @@ span.icon {
 @media screen and (min-aspect-ratio: 2/1) {
 	.grid {
 		grid-template-columns: repeat(5, 1fr);
+	}
+
+	.info h3 {
+		/* font-size: 50em; */
 	}
 
 	.about-me {
