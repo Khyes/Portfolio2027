@@ -101,7 +101,7 @@ img {
 }
 
 .gradients-container {
-	filter: url(#goo) blur(15px);
+	filter: blur(15px);
 	width: 100%;
 	height: 100%
 }
@@ -109,56 +109,24 @@ img {
 /* INDIVIDUAL BACKGROUND GRADIENTS */
 .g1 {
 	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+	background: radial-gradient(circle at center, rgba(var(--color1), 0.9) 0, rgba(var(--color1), 0) 50%) no-repeat;
 	mix-blend-mode: var(--blending);
 	width: var(--circle-size);
 	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2);
-	left: calc(50% - var(--circle-size) / 2);
-	transform-origin: center center;
-	animation: moveVertical 30s ease infinite;
-	opacity: 1
+	top: -50vh;
+	right: -40vw;
 }
 
 .g2 {
 	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+	background: radial-gradient(circle at center, rgba(var(--color4), 0.9) 0, rgba(var(--color4), 0) 50%) no-repeat;
 	mix-blend-mode: var(--blending);
 	width: var(--circle-size);
 	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2);
-	left: calc(50% - var(--circle-size) / 2);
-	transform-origin: calc(50% - 400px);
-	animation: moveInCircle 20s reverse infinite;
-	opacity: 1
+	bottom: -50vh;
+	left: -40vw;
+	/* Pas d'animation — statique */
 }
-
-.g3 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: var(--circle-size);
-	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2 + 200px);
-	left: calc(50% - var(--circle-size) / 2 - 500px);
-	transform-origin: calc(50% + 400px);
-	animation: moveInCircle 40s linear infinite;
-	opacity: 1
-}
-
-.g4 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: var(--circle-size);
-	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2);
-	left: calc(50% - var(--circle-size) / 2);
-	transform-origin: calc(50% - 200px);
-	animation: moveHorizontal 40s ease infinite;
-	opacity: .7
-}
-
 
 .interactive {
 	position: absolute;
@@ -168,7 +136,7 @@ img {
 	height: 100%;
 	top: -50%;
 	left: -50%;
-	opacity: .7
+	opacity: .8
 }
 
 /* GRADIENT ANIMATIONS */
@@ -1166,6 +1134,191 @@ span.icon {
 	padding: 0 .5rem
 }
 
+/* PROJECTS PAGE */
+
+.work-section {
+	margin: 3rem 2rem 7rem 2rem;
+	width: 100%;
+}
+
+.work-grid {
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* grid-template-rows: repeat(7, 1fr); */
+	grid-column-gap: 3rem;
+	grid-row-gap: 3rem;
+}
+
+.work-grid h3 {
+	text-transform: uppercase;
+}
+
+.work-grid p {
+	font-size: 12px;
+}
+
+
+.project {
+	overflow: hidden;
+	position: relative;
+	border-radius: 2rem;
+	display: block;
+	text-decoration: none;
+	border: 1px solid #ebe5dd;
+	color: inherit;
+	transition: transform 0.7s ease;
+}
+
+.project:focus {
+	outline: 2px solid white;
+	outline-offset: 4px;
+}
+
+.project:hover {
+	transform: translateY(-4px);
+}
+
+.project-bg {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all 0.7s ease;
+	/* filter: sepia(25%); */
+}
+
+.project-bg:hover {
+	filter: sepia(0%);
+}
+
+.project1 .project-bg {
+	background-image: url("img/project1.jpg");
+}
+
+.project2 .project-bg {
+	background-image: url("img/projects-belair-full.png");
+}
+
+.project3 .project-bg {
+	background-image: url("img/Projects_Illustration.png");
+}
+
+.project4 .project-bg {
+	background-image: url("img/Projects_PlanetsFacts.png");
+}
+
+.project5 .project-bg {
+	background-image: url("img/project2.jpg");
+}
+
+.project6 .project-bg {
+	background-image: url("img/Projects_Oser.png");
+}
+
+.project7 .project-bg {
+	background-image: url("img/");
+}
+
+.project8 .project-bg {
+	background-image: url("img/Projects_AppMeteo.png");
+}
+
+.project9 .project-bg {
+	background-image: url("img/Projects_CartierLibre.png");
+}
+
+.project-overlay {
+	position: absolute;
+	color: white;
+	z-index: 2;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.project-overlay.bottom {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+
+	background: rgba(147, 132, 116, 0.50);
+	border-top: 1px solid #ebe5dd;
+}
+
+.project-overlay.side1 {
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 90px;
+	border-left: 1px solid #ebe5dd;
+	background: rgba(147, 132, 116, 0.50);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.project-overlay.side2 {
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 90px;
+	border-left: 1px solid #ebe5dd;
+	background: rgba(147, 132, 116, 0.50);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.side-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	writing-mode: vertical-rl;
+	/* transform: rotate(180deg); */
+}
+
+.side-text h3,
+.side-text p {
+	margin: 0;
+}
+
+
+
+.project:hover .project-bg {
+	transform: scale(1.05);
+}
+
+.project1 {
+	grid-column: span 2;
+	aspect-ratio: 2 / 1;
+	/* plus petit visuellement */
+}
+
+.project2,
+.project3,
+.project5,
+.project6,
+.project8,
+.project9 {
+	aspect-ratio: 2 / 1;
+}
+
+.project4,
+.project7 {
+	grid-column: span 2;
+	aspect-ratio: 3 / 1;
+}
+
 /* Écrans "carrés" ou plus hauts que larges — ratio proche de 1:1 */
 @media screen and (max-aspect-ratio: 16/10) {
 	.hero-bg {
@@ -1485,11 +1638,31 @@ span.icon {
 	}
 
 	.numbers {
-		font-size: 3em;
+		font-size: 5em;
+	}
+
+	.div7 .bottom {
+		width: 100%;
 	}
 
 	.text h1 {
 		font-size: clamp(48px, 8vw, 72px);
+	}
+
+	.about-me .top h3 {
+		font-size: clamp(30px, 9vw, 40px);
+	}
+
+	.about-me p {
+		justify-content: center;
+	}
+
+	.tools h3 {
+		font-size: clamp(20px, 8vw, 30px);
+	}
+
+	.grid>div span {
+		font-size: clamp(15px, 5vw, 25px);
 	}
 
 	#btn-about {
