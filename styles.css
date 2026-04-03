@@ -601,6 +601,7 @@ canvas {
 
 #hero-up.allowed {
 	opacity: 1;
+	color: #382b22;
 	cursor: pointer !important;
 }
 
@@ -1197,11 +1198,11 @@ span.icon {
 }
 
 .project1 .project-bg {
-	background-image: url("img/project1.jpg");
+	background-image: url("img/Projects_CosmicEchoesEndingV.png");
 }
 
 .project2 .project-bg {
-	background-image: url("img/projects-belair-full.png");
+	background-image: url("img/Projects_BelAir.png");
 }
 
 .project3 .project-bg {
@@ -1213,7 +1214,7 @@ span.icon {
 }
 
 .project5 .project-bg {
-	background-image: url("img/project2.jpg");
+	background-image: url("img/Projects_Pablo.png");
 }
 
 .project6 .project-bg {
@@ -1221,7 +1222,7 @@ span.icon {
 }
 
 .project7 .project-bg {
-	background-image: url("img/");
+	background-image: url("img/Projects_Rocambolesque.png");
 }
 
 .project8 .project-bg {
@@ -1246,8 +1247,9 @@ span.icon {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 90px;
-
+	height: 80px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	background: rgba(147, 132, 116, 0.50);
 	border-top: 1px solid #ebe5dd;
 }
